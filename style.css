@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }
+
 body{
     font-family: 'Lato', sans-serif;
 padding: 0;
@@ -71,6 +75,7 @@ color:lightgray;
 
 background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
+overflow: hidden;
 
 }
 
@@ -78,11 +83,111 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
 
 display: flex;
 width: 500vw;
+transition: all 1s ease-in-out;
+
 
 }
 
 .sliderItem{
 
 width: 100vw;
+display: flex;
+align-items:center;
+justify-content: center;
+position: relative;
 
 }
+
+.slideBg{
+    width: 750px;
+    height: 750px;
+    border-radius:50%;
+    position:absolute;
+    background-color:yellow;
+}
+
+.sliderImg{
+    z-index: 1;
+}
+
+.sliderTitle{
+
+position: absolute;
+top: 10%;
+right: 10%;
+font-size: 60px;
+font-weight: 900;
+text-align: center;
+color: white;
+z-index: 1;
+
+}
+
+.sliderPrice{
+
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    border: 1px solid gray;
+    z-index: 1;
+    
+    }
+
+    .buyBotton{
+
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        font-size: 60px;
+        font-weight: 900;
+        text-align: center;
+        color: white;
+        border: 1px solid gray;
+        background-color:black;
+        z-index: 1;
+        cursor:pointer;
+
+        }
+
+        .buyBotton:hover{
+            background-color:white;
+            color:black;
+        }
+
+        .sliderItem:nth-child(1) .slideBg{
+            background-color:aquamarine;
+        }
+
+        .sliderItem:nth-child(2) .slideBg{
+            background-color:chartreuse;
+        }
+        .sliderItem:nth-child(3) .slideBg{
+            background-color:chocolate;
+        }
+        .sliderItem:nth-child(4) .slideBg{
+            background-color:yellow;
+        }
+        .sliderItem:nth-child(5) .slideBg{
+            background-color:yellowgreen;
+        }
+
+
+        .sliderItem:nth-child(1) .sliderPrice{
+            color:aquamarine;
+        }
+        .sliderItem:nth-child(2) .sliderPrice{
+            color:chartreuse;
+        }
+        .sliderItem:nth-child(3) .sliderPrice{
+            color:chocolate;
+        }
+        .sliderItem:nth-child(4) .sliderPrice{
+           color:yellow;
+        }
+        .sliderItem:nth-child(5) .sliderPrice{
+            color:yellowgreen;
+        }
